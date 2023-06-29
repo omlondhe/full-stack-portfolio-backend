@@ -7,7 +7,7 @@ import { Experiences } from "./models/experiences";
 const app: Express = express();
 app.use(express.static("public"));
 
-const port = 3000;
+const port = process.env.PORT || 8080;
 
 app.get("/", (req: Request, res: Response) => {
   res.status(200).send("Up and running");
