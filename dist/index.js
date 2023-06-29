@@ -18,6 +18,7 @@ const projects_1 = require("./models/projects");
 const achievements_1 = require("./models/achievements");
 const experiences_1 = require("./models/experiences");
 const app = (0, express_1.default)();
+app.use(express_1.default.static("public"));
 const port = 3000;
 app.get("/", (req, res) => {
     res.status(200).send("Up and running");
