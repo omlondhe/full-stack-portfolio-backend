@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { Projects } from "./models/projects";
 import { Achievements } from "./models/achievements";
 import { Experiences } from "./models/experiences";
-import path from "path";
+// import path from "path";
 
 const app: Express = express();
 const port = 3000;
@@ -24,10 +24,10 @@ app.get("/get-all-experiences", async (req: Request, res: Response) => {
 });
 
 // if (process.env.NODE_ENV === "development") {
-app.use(express.static(path.join(__dirname, "../../frontend", "build")));
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../frontend", "build", "index.html"));
-});
+// app.use(express.static(path.join(__dirname, "../../frontend", "build")));
+// app.get("/*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../../frontend", "build", "index.html"));
+// });
 // }
 
 mongoose
